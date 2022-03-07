@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="choose-class-style.css">
+
+    <title>Album</title>
+
+</head>
+<body>
+    
+    <button type="button" class="menu-button js-menu-trigger" aria-label="Click to open menu"></button>
+    <div class="pen-title js-menu-trigger">
+      
+      <div class="info" style="font-size: 30px; color: rgb(255, 255, 255); padding-bottom: 17px;">Информация за класове</div>
+    </div>
+    
+    <div class="menu js-menu">
+      <div class="menu__item">
+        <div class="menu__item__bg-container"></div>
+        <div class="menu__item__content">
+          <a href="class-of-year-12-A.html" class="btn-link">12 А</a>
+        </div>
+      </div>
+      <div class="menu__item">
+        <div class="menu__item__bg-container"></div>
+        <div class="menu__item__content">
+          <a href="class-of-year-12-B.html" class="btn-link">12 Б</a>
+        </div>
+      </div>
+      <div class="menu__item">
+        <div class="menu__item__bg-container"></div>
+        <div class="menu__item__content">
+          <nav class="main-navigation">
+            <a class="main-navigation__link" href="index.html">Начало</a>
+            <a class="main-navigation__link" href="about-us.html">За нас</a>
+            <a class="main-navigation__link" href="contact.html">Контакти</a>
+          </nav>
+        </div>
+      </div>
+      <div class="menu__item">
+        <div class="menu__item__bg-container"></div>
+        <div class="menu__item__content">
+          <a href="class-of-year-12-А.html" class="btn-link">12 В</a>
+        </div>
+      </div>
+      <div class="menu__item">
+        <div class="menu__item__bg-container"></div>
+        <div class="menu__item__content">
+          <a href="class-of-year-12-А.html" class="btn-link">12 Г</a>
+        </div>
+      </div>
+    </div>
+
+<script>
+  const penTitle = document.querySelector('.pen-title');
+  const menu = document.querySelector('.js-menu');
+  const menuTrigger = document.querySelectorAll('.js-menu-trigger');
+  menuTrigger.forEach(btn => {
+    btn.addEventListener('click', function () {
+    menuTrigger.forEach(b => {
+      b.classList.toggle('menu-trigger--menu-open');
+      });
+       menu.classList.toggle('menu--open');
+      });
+  });
+</script>
+
+</body>
+</html>

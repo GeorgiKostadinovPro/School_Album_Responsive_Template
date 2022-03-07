@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@400;500;600;700;800;900&display=swap");
+body {
+  
+  font-family: "Baloo 2", cursive;
+    margin: 0;
+    padding-left: 6%;
+    padding-right: 6%;
+    background: #191919;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    float: left;
+    width: 32%;
+    margin-bottom: 16px;
+    padding: 0 1px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 2px;
+    background-color: whitesmoke;
+  }
+  
+  .about-section {
+    padding: 100px;
+    text-align: center;
+    background: #1a1a1a url("images/pexels-photo-1029614.jpeg") no-repeat center/cover;
+    color: black;
+    font-size: 20px;
+    left: 0;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: rgb(49, 48, 48);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .menu-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    background: #e20f2f;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 300ms ease;
+  }
+  .menu-button:after {
+    content: "-";
+    width: 30px;
+    height: 30px;
+    display: block;
+    color: #000;
+    font-size: 24px;
+    font-weight: lighter;
+    transition: all 300ms ease;
+  }
+  .menu-button:hover {
+    transform: scale(1.1);
+  }
+  .menu-button.menu-trigger--menu-open:after {
+    transform: rotate(765deg);
+  }
+  

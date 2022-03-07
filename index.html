@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album</title>
+    
+    <link rel="stylesheet" href="index-style.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="menu">
+                <h3 class="logo">Училищен<span>Албум</span></h3>
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="main">
+                <header>
+                    <div class="overlay">
+                        <h2 class="title">Това е PPMG School Album</h2>
+                        <p class="description">“Най-доброто интерактивно хранилище за вашите спомени!” 
+                        </p>
+                        <a href="classes-page.html" class="button">Към випуските</a>
+                    </div>
+                </header>
+            </div>
+            <div class="shadow one"></div>
+            <div class="shadow two"></div>
+        </div>
+        <div class="links">
+            <ul>
+                <li class="active">
+                    <a href="index.html" style="--i: 0.05s">Начало</a>
+                </li>
+                <li>
+                    <a href="about-us.html" style="--i: 0.1s">За нас</a>
+                </li>
+                <li>
+                    <a href="contact.html" style="--i: 0.15s">Контакт</a>
+                </li>
+               
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        const hamburger_menu = document.querySelector(".hamburger-menu");
+
+        const container = document.querySelector(".container");
+
+      hamburger_menu.addEventListener("click", () => {
+      container.classList.toggle("active");
+     })
+    </script>
+
+</body>
+</html>

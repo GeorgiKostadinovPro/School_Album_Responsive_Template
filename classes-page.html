@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <link rel="stylesheet" href="classes-page-style.css" />
+
+
+    <title>Album</title>
+
+  </head>
+  <body>
+    <button type="button" class="menu-button js-menu-trigger" aria-label="Click to open menu"></button>
+    <div class="pen-title js-menu-trigger">
+      <h1 style="font-size: 30px;"><a href="index.html" style="color: rgb(255, 255, 255); text-decoration: none;">Главно меню</a> </h1>
+      <div class="info" style="font-size: 30px; color: red;">Информация за випуски</div>
+    </div>
+    
+    <div class="menu js-menu">
+      <div class="menu__item">
+        <div class="menu__item__bg-container"></div>
+        <div class="menu__item__content">
+          <a href="choose-class.html" class="btn-link">Випуск 2021</a>
+        </div>
+      </div>
+      <div class="menu__item">
+        <div class="menu__item__bg-container"></div>
+        <div class="menu__item__content">
+          <a href="choose-class.html" class="btn-link">Випуск 2020</a>
+        </div>
+      </div>
+      <div class="menu__item">
+        <div class="menu__item__bg-container"></div>
+        <div class="menu__item__content">
+          <nav class="main-navigation">
+            <a class="main-navigation__link" href="index.html">Начало</a>
+            <a class="main-navigation__link" href="about-us.html">За нас</a>
+            <a class="main-navigation__link" href="contact.html">Контакти</a>
+          </nav>
+        </div>
+      </div>
+      <div class="menu__item">
+        <div class="menu__item__bg-container"></div>
+        <div class="menu__item__content">
+          <a href="choose-class.html" class="btn-link">Випуск 2019</a>
+        </div>
+      </div>
+      <div class="menu__item">
+        <div class="menu__item__bg-container"></div>
+        <div class="menu__item__content">
+          <a href="choose-class.html" class="btn-link">Випуск 2018</a>
+        </div>
+      </div>
+    </div>
+
+<script>
+  const penTitle = document.querySelector('.pen-title');
+  const menu = document.querySelector('.js-menu');
+  const menuTrigger = document.querySelectorAll('.js-menu-trigger');
+  menuTrigger.forEach(btn => {
+    btn.addEventListener('click', function () {
+    menuTrigger.forEach(b => {
+      b.classList.toggle('menu-trigger--menu-open');
+      });
+       menu.classList.toggle('menu--open');
+      });
+  });
+</script>
+
+  </body>
+</html>
